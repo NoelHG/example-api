@@ -4,6 +4,9 @@ Rails.application.routes.draw do
     member do
       resources :sleep_records, only: :index
       post 'clock_in', to: 'clock_ins#create'
+      post 'follow', to: 'follow_relationships#create'
+      delete 'unfollow', to: 'follow_relationships#destroy'
+      get 'followee_records', to: 'followee_sleeping_records#index'
     end
   end
 end
