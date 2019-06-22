@@ -1,24 +1,22 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Testing with curl:
 
-Things you may want to cover:
+Users:
+curl -X POST 'http://localhost:3000/users/' -d name=username
 
-* Ruby version
+Follow:
+curl -X POST 'http://localhost:3000/users/:id/follow' -d follower=:user_id
 
-* System dependencies
+Unfollow:
+curl -X DELETE 'http://localhost:3000/users/:id/follow' -d follower=:user_id
 
-* Configuration
+Clock-in:
+curl -X POST 'http://localhost:3000/users/:id/clock_in
 
-* Database creation
+Sleep records for user:
+curl -X GET 'http://localhost:3000/users/:id/sleep_records'
 
-* Database initialization
+Sleep records for followees of user:
+curl -X GET 'http://localhost:3000/users/1/followee_records'
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
