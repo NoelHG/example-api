@@ -6,14 +6,15 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.create!(user_params)
+    @user = User.new(user_params)
+    @user.clock = Clock.new
+    @user.save!
     json_response(@user, :created)
   end
 
-  private
+private
 
   def user_params
     params.permit(:name)
   end
-
 end
