@@ -1,4 +1,6 @@
-# README
+# Example API
+
+Just a simple API that shows some of the Ruby code I write, since everything I do tends to be on private repos. This API tracks sleep records of users.
 
 Testing with curl:
 
